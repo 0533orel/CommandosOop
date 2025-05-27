@@ -31,9 +31,9 @@ namespace CommandosOop.Models
             Console.WriteLine($"The soldier is {Status}");
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
-            Console.WriteLine($"Commando with a code name {CodeName} is attacking");
+            Console.WriteLine("Ground commando soldier attacks");
         }
 
 
