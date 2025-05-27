@@ -34,21 +34,6 @@ namespace CommandosOop.Models
             "Faisal",
             "Imad"
         };
-
-        private static List<string> weaponsNames = new List<string>
-        {
-            "M16",
-            "AK-47",
-            "Glock 17",
-            "Uzi",
-            "MP5",
-            "M4A1",
-            "Desert Eagle",
-            "FN SCAR",
-            "Beretta M9",
-            "Remington 870",
-            "Knife"
-        };
        
         public static List<Enemy> Enemies(int numberOfEnemies)
         {
