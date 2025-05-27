@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CommandosOop.Models
+{
+    public static class EnemyFactory
+    {
+        private static Random Random = new Random();
+
+        private static List<string> arabicNames = new List<string>
+        {
+            "Ahmad",
+            "Mohammed",
+            "Ali",
+            "Omar",
+            "Hassan",
+            "Hussein",
+            "Ibrahim",
+            "Khalid",
+            "Youssef",
+            "Mustafa",
+            "Samir",
+            "Nasser",
+            "Tariq",
+            "Salim",
+            "Zaid",
+            "Bilal",
+            "Karim",
+            "Anas",
+            "Faisal",
+            "Imad"
+        };
+
+        private static List<string> weaponsNames = new List<string>
+        {
+            "M16",
+            "AK-47",
+            "Glock 17",
+            "Uzi",
+            "MP5",
+            "M4A1",
+            "Desert Eagle",
+            "FN SCAR",
+            "Beretta M9",
+            "Remington 870",
+            "Knife"
+        };
+       
+        public static List<Enemy> Enemies(int numberOfEnemies)
+        {
+
+            List<Enemy> enemies = new List<Enemy>();
+            for (int i = 1; i <= numberOfEnemies; i++)
+            {
+                enemies.Add(new Enemy(arabicNames[Random.Next(0, arabicNames.Count - 1)]));
+            }
+            return enemies;
+
+        }
+
+    }
+}
