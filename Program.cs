@@ -10,7 +10,8 @@ namespace CommandosOop
             Commando commando = new Commando("orel", "Od");
             AirCommando airCommando = new AirCommando("Nati", "Nk");
             SeaCommando seaCommando = new SeaCommando("Arye", "Ae");
-            
+            Enemy enemy = new Enemy("hasan");
+
         }
     }
 }
