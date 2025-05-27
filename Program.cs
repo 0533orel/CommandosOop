@@ -8,7 +8,8 @@ namespace CommandosOop
         {
             Commando commando = new Commando("orel", "Od");
             Weapon weapon = new Weapon("m-16", "KOLT", 10);
-
+            AirCommando airCommando = new AirCommando("Nati", "Nk");
+            
         }
     }
 }
