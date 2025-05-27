@@ -8,14 +8,14 @@ namespace CommandosOop.Models
 {
     public class Commando
     {
-        public string Name;
-        public string CodeName;
+        private string _name;
+        public string CodeName { get; set; }
         protected List<string> Tools = new List<string> { "hammer", "Chisel", "rope", "bag", "watery" };
         protected string Status = "";
 
         public Commando(string name, string codeName)
         {
-            Name = name;
+            _name = name;
             CodeName = codeName;
         }
 
@@ -34,6 +34,17 @@ namespace CommandosOop.Models
         public void Attack()
         {
             Console.WriteLine($"Commando with a code name {CodeName} is attacking");
+        }
+
+
+        public void SayName(string commanderRank)
+        {
+            if (commanderRank.ToUpper() == "GENERAL")
+                Console.WriteLine(_name);
+            else if (commanderRank.ToUpper() == "COLONEL")
+                Console.WriteLine(CodeName);
+            else
+                Console.WriteLine("This information is classified.");
         }
     }
 }
