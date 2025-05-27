@@ -14,5 +14,10 @@ namespace CommandosOop.Models
         {
             Console.WriteLine("the soldier can parachute");
         }
+
+        public override void Attack()
+        {
+            Console.WriteLine("Air commando soldier attacks");
+        }
     }
 }
