@@ -78,63 +78,63 @@ namespace CommandosOop.Models
         };
 
 
-        //public static List<Commando> Commandos(string typeOfSoldier,int numberOfEnemies)
-        //{
-        //    List<Commando> commandos = new List<Commando>();
-        //    switch (typeOfSoldier.ToLower())
-        //    {
-        //        case ("commando"):
-        //            for (int i = 1; i <= numberOfEnemies; i++)
-        //            {
-        //                commandos.Add(new Commando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
-        //            }
-        //            break;
-        //        case ("air commando"):
-        //            for (int i = 1; i <= numberOfEnemies; i++)
-        //            {
-        //                commandos.Add(new AirCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
-        //            }
-        //            break;
-        //        case ("sea commando"):
-        //            for (int i = 1; i <= numberOfEnemies; i++)
-        //            {
-        //                commandos.Add(new SeaCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
-        //            }
-        //            break;
-        //    }
-        //    return commandos;
-
-        //}
-
-        public static List<Commando> Commandos(int numberOfEnemies)
+        public static List<Commando> Commandos(string typeOfSoldier, int numOfSoldiers)
         {
             List<Commando> commandos = new List<Commando>();
-            for (int i = 1; i <= numberOfEnemies; i++)
+            switch (typeOfSoldier.ToLower())
             {
-                commandos.Add(new Commando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+                case ("commando"):
+                    for (int i = 1; i <= numOfSoldiers; i++)
+                    {
+                        commandos.Add(new Commando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+                    }
+                    break;
+                case ("air"):
+                    for (int i = 1; i <= numOfSoldiers; i++)
+                    {
+                        commandos.Add(new AirCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+                    }
+                    break;
+                case ("sea"):
+                    for (int i = 1; i <= numOfSoldiers; i++)
+                    {
+                        commandos.Add(new SeaCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+                    }
+                    break;
             }
             return commandos;
+
         }
 
-        public static List<AirCommando> airCommandos(int numberOfEnemies)
-        {
-            List<AirCommando> commandos = new List<AirCommando>();
-            for (int i = 1; i <= numberOfEnemies; i++)
-            {
-                commandos.Add(new AirCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
-            }
-            return commandos;
-        }
+        //public static List<Commando> Commandos(int numberOfEnemies)
+        //{
+        //    List<Commando> commandos = new List<Commando>();
+        //    for (int i = 1; i <= numberOfEnemies; i++)
+        //    {
+        //        commandos.Add(new Commando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+        //    }
+        //    return commandos;
+        //}
 
-        public static List<SeaCommando> seaCommandos(int numberOfEnemies)
-        {
-            List<SeaCommando> commandos = new List<SeaCommando>();
-            for (int i = 1; i <= numberOfEnemies; i++)
-            {
-                commandos.Add(new SeaCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
-            }
-            return commandos;
-        }
+        //public static List<AirCommando> airCommandos(int numberOfEnemies)
+        //{
+        //    List<AirCommando> commandos = new List<AirCommando>();
+        //    for (int i = 1; i <= numberOfEnemies; i++)
+        //    {
+        //        commandos.Add(new AirCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+        //    }
+        //    return commandos;
+        //}
+
+        //public static List<SeaCommando> seaCommandos(int numberOfEnemies)
+        //{
+        //    List<SeaCommando> commandos = new List<SeaCommando>();
+        //    for (int i = 1; i <= numberOfEnemies; i++)
+        //    {
+        //        commandos.Add(new SeaCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
+        //    }
+        //    return commandos;
+        //}
 
     }
 }

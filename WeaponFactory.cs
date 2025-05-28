@@ -30,7 +30,7 @@ namespace CommandosOop.Models
             List<Weapon> weapons = new List<Weapon>();
             for (int i = 1; i <= numberOfWeapons; i++)
             {
-                weapons.Add(new Weapon(weaponsNames[Random.Next(0, weapons.Count - 1)], "israel", 100));
+                weapons.Add(new Weapon(weaponsNames[Random.Next(0, weaponsNames.Count - 1)], "israel", 100));
             }
             return weapons;
         }
