@@ -1,11 +1,12 @@
-﻿using System;
+﻿using CommandosOop.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandosOop.Models
+namespace CommandosOop.Factories
 {
     public static class EnemyFactory
     {

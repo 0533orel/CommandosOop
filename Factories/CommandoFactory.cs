@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommandosOop.Models;
+using CommandosOop.Soldiers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandosOop.Models
+namespace CommandosOop.Factories
 {
     public static class CommandoFactory
     {
@@ -83,19 +85,19 @@ namespace CommandosOop.Models
             List<Commando> commandos = new List<Commando>();
             switch (typeOfSoldier.ToLower())
             {
-                case ("commando"):
+                case "commando":
                     for (int i = 1; i <= numOfSoldiers; i++)
                     {
                         commandos.Add(new Commando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
                     }
                     break;
-                case ("air"):
+                case "air":
                     for (int i = 1; i <= numOfSoldiers; i++)
                     {
                         commandos.Add(new AirCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));
                     }
                     break;
-                case ("sea"):
+                case "sea":
                     for (int i = 1; i <= numOfSoldiers; i++)
                     {
                         commandos.Add(new SeaCommando(jewishNames[Random.Next(0, jewishNames.Count - 1)], codeNames[Random.Next(0, jewishNames.Count - 1)]));

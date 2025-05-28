@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CommandosOop.Abstracts;
+using CommandosOop.Factories;
+using CommandosOop.Soldiers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -11,7 +14,7 @@ namespace CommandosOop.Models
     public class Game
     {
         public List<Commando> Commandos = new List<Commando>();
-        public List<Weapon> Weapons = new List<Weapon>();
+        public List<Firearms> Weapons = new List<Firearms>();
         public List<Enemy> Enemies = new List<Enemy>();
 
         public Game()

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandosOop.Models
+namespace CommandosOop.Soldiers
 {
     public class AirCommando : Commando
     {

@@ -1,11 +1,12 @@
-﻿using System;
+﻿using CommandosOop.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandosOop.Models
+namespace CommandosOop.Factories
 {
     public static class WeaponFactory
     {
@@ -25,12 +26,12 @@ namespace CommandosOop.Models
             "Remington 870"
         };       
 
-        public static List<Weapon> Weapons(int numberOfWeapons)
+        public static List<Firearms> Weapons(int numberOfWeapons)
         {
-            List<Weapon> weapons = new List<Weapon>();
+            List<Firearms> weapons = new List<Firearms>();
             for (int i = 1; i <= numberOfWeapons; i++)
             {
-                weapons.Add(new Weapon(weaponsNames[Random.Next(0, weaponsNames.Count - 1)], "israel", 100));
+                weapons.Add((Firearms)new Weapon(weaponsNames[Random.Next(0, weaponsNames.Count - 1)], "israel", 100));
             }
             return weapons;
         }
